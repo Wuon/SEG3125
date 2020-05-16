@@ -1,0 +1,65 @@
+body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+a {
+  color: #1DA1F2;
+  text-decoration: none;
+}
+
+table {
+    background-color: #f1f1c1;
+}
+
+/* Defining styling for a specific element type - large block buttons */
+.block {
+  display: block;
+  border: none;
+  color: white;
+  background-color: green;  /* yellow */
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Defining styling for a specific element with an id */
+#signature {
+  text-align: right;
+  color: red;
+  font-style: italic;
+  font-size: 75%;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 600px;
+}
+
+.box {
+  border: 1px solid black;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  text-align: left;
+}
