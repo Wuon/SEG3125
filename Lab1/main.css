@@ -1,7 +1,23 @@
+@font-face {
+  font-family: Gilroy;
+  src: url(./Gilroy-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Gilroy;
+  src: url(./Gilroy-SemiBold.ttf);
+  font-weight: 700;
+}
+
 body {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   width: 100%;
+  font-family: 'Gilroy';
 }
 
 h1 {
@@ -25,6 +41,10 @@ table {
     background-color: #f1f1c1;
 }
 
+textarea {
+  resize: none;
+}
+
 /* Defining styling for a specific element type - large block buttons */
 .block {
   display: block;
@@ -35,14 +55,6 @@ table {
   font-size: 16px;
   cursor: pointer;
   text-align: center;
-}
-
-/* Defining styling for a specific element with an id */
-#signature {
-  text-align: right;
-  color: red;
-  font-style: italic;
-  font-size: 75%;
 }
 
 .form-container{
@@ -62,4 +74,9 @@ table {
   justify-content: left;
   flex-direction: column;
   text-align: left;
+}
+
+.helper {
+  margin-top: 0px;
+  font-size: 14px;
 }
