@@ -10,13 +10,13 @@
   <h1> Welcome to Woblaws</h1>
   <!-- Tab links, each one with an onclick event associated with it -->
   <div class="tab">
-    <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+    <button class="tablinks active" onclick="openInfo(event, 'Client')">Client</button>
     <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
     <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
   </div>
 
   <!-- Tab content -->
-  <div id="Client" class="tabcontent">
+  <div id="Client" class="tabcontent" style="display: block;">
     <h3>Client Information</h3>
     <p>Tell us a bit about you.</p>
     Dietary restrictions:
@@ -49,6 +49,8 @@
     <p>Here is your cart.</p>
     <div id="displayCart"></div>
   </div>
+
+  <p>Website designed by Daniel Wu</p>
 
   <script src="scripts/groceries.js"></script>
   <script src="scripts/main.js"></script>

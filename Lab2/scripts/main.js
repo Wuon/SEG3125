@@ -80,11 +80,17 @@ function selectedItems() {
 
 }
 
+function priceComparator(a, b) {
+  return a.price > b.price ? 1 : -1
+}
+
 function renderProductList(optionArray){
   var s2 = document.getElementById('displayProduct');
-  for (i = 0; i < optionArray.length; i++) {
+  const sortedOptionArray = optionArray.sort(priceComparator);
+  for (i = 0; i < sortedOptionArray.length; i++) {
 
-    var productName = optionArray[i];
+    var productName = sortedOptionArray[i].name;
+    var productPrice = sortedOptionArray[i].price;
     // create the checkbox and add in HTML DOM
     var checkbox = document.createElement("input");
     checkbox.type = "checkbox";
@@ -92,10 +98,12 @@ function renderProductList(optionArray){
     checkbox.value = productName;
     s2.appendChild(checkbox);
 
+    formattedPrice = (Math.round(productPrice * 100) / 100).toFixed(2);
+
     // create a label for the checkbox, and also add in HTML DOM
     var label = document.createElement('label')
     label.htmlFor = productName;
-    label.appendChild(document.createTextNode(productName));
+    label.appendChild(document.createTextNode(`${productName} - $${formattedPrice}`));
     s2.appendChild(label);
 
     // create a breakline node and add in HTML DOM
