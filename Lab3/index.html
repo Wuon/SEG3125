@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <! This style sheet is taken from https://www.w3schools.com/howto/howto_js_tabs.asp>
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <h1>Welcome to Woblaws</h1>
+  <p><i>"essentials for everyone"</i></p>
+  <!-- Tab content -->
+  <div id="myCustomerModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Customer settings</h2>
+      </div>
+      <div class="modal-body">
+        <p>Let us learn more about you!</p>
+        Do you currently have any dietary restrictions?
+        <br>
+        <br>
+        <input type="checkbox" id="vegetarian" name="vegetarian" value="Vegetarian" onchange="populateListProductChoices(this.id)">
+        <label for="vegetarian">Vegetarian</label><br>
+        <input type="checkbox" id="glutenFree" name="glutenFree" value="GlutenFree" onchange="populateListProductChoices(this.id)">
+        <label for="glutenFree">Gluten Free</label><br>
+        <br>
+        Would you prefer to only view organic products?
+        <br>
+        <br>
+        <input type="checkbox" id="organic" name="organic" value="Organic" onchange="populateListProductChoices(this.id)">
+        <label for="organic">Organic</label><br>
+      </div>
+    </div>
+  </div>
+
+  <div id="myCartModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Checkout</h2>
+      </div>
+      <div class="modal-body">
+        <h3>Cart</h3>
+        <p>Here is your cart.</p>
+        <div id="displayCart"></div>
+        <button class="block-button">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="Products" class="tabcontent">
+    <button id="myCustomerBtn" class="block block-button">
+      Customer settings
+    </button>
+    <button id="myCartBtn" class="block block-button">
+      View cart
+    </button>
+    <h3>Available products</h3>
+    <p>Items shown below are products based on your preferences and dietary restritions.</p>
+    <h4>Click on a category / categories to view items.</h4>
+    <div class="tab">
+      <button class="tablinks" onclick="toggleCategory(event, 'Fish')">Fish</button>
+      <button class="tablinks" onclick="toggleCategory(event, 'Fruit')">Fruit</button>
+      <button class="tablinks" onclick="toggleCategory(event, 'Grain')">Grain</button>
+      <button class="tablinks" onclick="toggleCategory(event, 'Vegetable')">Vegetable</button>
+    </div>
+    <div id="displayProduct"></div>
+    <button id="addCart" type="button" class="block block-button" onclick="selectedItems()">
+      Add selected items to cart.
+    </button>
+  </div>
+
+  <p>Website designed by Daniel Wu</p>
+
+  <script src="scripts/groceries.js"></script>
+  <script src="scripts/main.js"></script>
+
+</body>
+
+</html>
