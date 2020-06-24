@@ -1,0 +1,398 @@
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>6ix Fades</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("form[name='registration']").validate({
+          rules: {
+            email: {
+              required: true,
+              email: true
+            },
+            fullname: {
+              required: true,
+            },
+            date: {
+              required: true,
+              date: true
+            },
+            cvv: {
+              required: true,
+              digits: true,
+            },
+            telephone: {
+              required: true,
+              digits: true
+            },
+            credit: {
+              required: true,
+              digits: true
+            },
+            exp: {
+              required: true,
+            }
+          },
+          messages: {
+            email: {
+              required: "Please enter an email address",
+              email: "Please enter a valid email address"
+            },
+            fullname: {
+              required: "Please enter your full name",
+            },
+            date: {
+              required: "Please enter a date",
+            },
+            cvv: {
+              required: "Please enter a CVV",
+              digits: "Please enter numbers only",
+            },
+            telephone: {
+              required: "Please enter your phone number in the format xxxxxxxxxxx"
+            },
+            credit: {
+              required: "Please enter your card number",
+            },
+            exp: {
+              required: "Please enter the expiry date"
+            }
+          },
+          submitHandler: function(form) {
+            form.submit();
+          }
+        });
+      });
+    </script>
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container">
+      <h1>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">6ix Fades</a>
+      </h1>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger light" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger light" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger light" href="#people">People</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger light" href="#book">Book</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-lg-7 my-auto">
+          <div class="header-content mx-auto">
+            <h1 class="mb-5">Fades from the heart of Toronto. Quality first.</h1>
+            <a href="#book">
+              <button type="button" class="btn btn-outline-light" href="#book">Book now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-heading text-center">
+        <h2>About Us</h2>
+        <p class="text-muted">Founded in 1969, our main priority is and will always be our customers</p>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 my-auto">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="feature-item">
+                  <i class="icon-screen-smartphone text-primary"></i>
+                  <h3>
+                    Where 
+                    <span class="material-icons">
+                      location_on
+                    </span>
+                  </h3>
+                  <p class="text-muted">150 Elgin St, Ottawa, ON K2P 1L4</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="feature-item">
+                  <i class="icon-camera text-primary"></i>
+                  <h3>
+                    When
+                    <span class="material-icons">
+                      schedule
+                    </span>
+                  </h3>
+                  <p class="text-muted">9:00am - 5:00pm</p>
+                  <p class="text-muted">Monday - Saturday</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="feature-item">
+                  <i class="icon-present text-primary"></i>
+                  <h3>
+                    How
+                    <span class="material-icons">
+                      call
+                    </span>
+                  </h3>
+                  <p class="text-muted">+1 416 613 1023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-heading text-center">
+        <h2>
+          <span class="material-icons">
+            content_cut
+          </span>
+          Services
+          <span class="material-icons">
+            content_cut
+          </span>
+        </h2>
+        <p class="text-muted">We offer a variety of options catered towards your need. Check them out below.</p>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 my-auto">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="feature-item">
+                  <img src="images/hair2.jpg">
+                  <h3>Trim ($10)</h3>
+                  <p class="text-muted">Need something short and quick? We offer 6ix certified trims to ensure you keep the style you want.</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="feature-item">
+                  <img src="images/hair3.jpg">
+                  <h3>6ixcut ($30)</h3>
+                  <p class="text-muted">Ready to embrace the heart of Toronto? Our certified hairdressers will ensure you'll keep coming back for more!</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="feature-item">
+                  <img src="images/hair1.jpg">
+                  <h3>6ixcut + wash ($35)</h3>
+                  <p class="text-muted">Offers everything in the 6ix cut package, with a premium wash and massage</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="people" id="people">
+    <div class="container">
+      <div class="section-heading text-center">
+        <h2>
+          <span class="material-icons">
+            emoji_people
+          </span>
+          People
+          <span class="material-icons">
+            emoji_people
+          </span>
+        </h2>
+        <p class="text-muted">Our employees are more than excited to give you the satisfaction you crave. Learn more about them below.</p>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 my-auto">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="feature-item">
+                  <img src="images/tracy.jpg">
+                  <h3>Tracy</h3>
+                  <p class="text-muted">Received an apprenticeship from the University of Toronto's hairstylist track in 2002. Has been cutting for 13+ years</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="feature-item">
+                  <img src="images/donald.jpg">
+                  <h3>Donald</h3>
+                  <p class="text-muted">Grew up in the heart of Toronto. Studying and mastering his craft from award winning hair stylist, David Lopez</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="feature-item">
+                  <img src="images/ethan.jpg">
+                  <h3>Ethan</h3>
+                  <p class="text-muted">Began his craft in High School. Since then has offered more than 10 years of experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="book" id="book">
+    <div class="container">
+      <div class="section-heading text-center">
+        <h2>Booking</h2>
+        <p class="text-muted">Ready to schedule with us? Fill out the following form below and we will get back with you in less than 4 hours.</p>
+        <p class="text-muted">Please not you will not be charged until after your appointment with us. We ask for your credit card information in case there is any avent of a last-minute cancellation ($5 charge).</p>
+        <hr>
+      </div>
+      <form name="registration">
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Full name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="fullname" id="fullname"  placeholder="Please enter your full name">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Phone<span class="material-icons">
+            call
+          </span></label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" name="telephone" id="telephone"  placeholder="Please enter your telephone number xxxxxxxxxx">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label" pattern="(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" name="email" id="email"  placeholder="Please enter your email">
+          </div>
+        </div>
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Service</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                <label class="form-check-label" for="gridRadios1">
+                  Trim ($15)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <label class="form-check-label" for="gridRadios2">
+                  6ixcut ($30)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                <label class="form-check-label" for="gridRadios3">
+                  6ixcut + wash ($35)
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Employee Preference</label>
+          <div class="col-sm-10">
+            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+              <option selected>None</option>
+              <option value="1">Tracy</option>
+              <option value="2">Donald</option>
+              <option value="3">Ethan</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-2">Date and Time</div>
+          <div class="col-sm-10">
+            <input class="form-control" type="datetime-local" name="date" id="date" >
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-2">
+            Card Number
+            <span class="material-icons">
+              payment
+            </span>
+          </div>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" name="credit" id="credit"  placeholder="Please enter your card number">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-2">CVV</div>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" name="cvv" id="cvv"  placeholder="Please enter your CVV">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-2">Expiration Date</div>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" name="exp" id="exp"  placeholder="Please enter your expiration date">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-2">Comments</div>
+          <div class="col-sm-10">
+            <input type="email" class="form-control"  placeholder="Is there any information you wish to let us know?">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button type="submit" class="btn btn-success">Confirm</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</body>
+</html>
