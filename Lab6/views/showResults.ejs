@@ -1,0 +1,45 @@
+<html lang="en-US">
+<head>
+    <title>Survey Analysis</title>
+</head>
+
+<body>
+    <h1>Survey analysis</h1>
+    <h2>Programming language</h2>
+    <ul>
+    <% for (var i=0; i<results[0].length; i++){ %>
+        <li><%= results[0][i].programmingLanguage %> :  <%= results[0][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Years of Experience</h2>
+    <ul>
+    <% for (var i=0; i<results[1].length; i++){ %>
+        <li><%= results[1][i].yoe %> :  <%= results[1][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Tabs or Spaces</h2>
+    <ul>
+    <% for (var i=0; i<results[2].length; i++){ %>
+        <li><%= results[2][i].tabVSSpace %> :  <%= results[2][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Editors</h2>
+    <ul>
+    <% for (var i=0; i<results[3].length; i++){ %>
+        <li><%= results[3][i].editor %> :  <%= results[3][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Companies</h2>
+    <ul>
+    <% for (var i=0; i<results[4].length; i++){ %>
+        <li><%= results[4][i].companies %> :  <%= results[4][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Comments</h2>
+    <ul>
+    <% for (var i=0; i<results[5].length; i++){ %>
+        <li><%= results[5][i].comments %> :  <%= results[5][i].count %></li>
+    <% } %>    
+    </ul>
+</body>
+</html>
