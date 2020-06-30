@@ -1,0 +1,90 @@
+<html>
+
+<head>
+  <title>Questionnaire</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+  <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+</head>
+
+<body>
+
+  <div class="container-md p-3 my-3 border" id="survey">
+    <h1>Survey</h1>
+    <form>
+      <div class="form-group">
+        <label for="formGroupExampleInput">What is your favourite programming language?</label>
+        <input type="text" name="programmingLanguage" class="form-control" placeholder="Please enter a programming language" required>
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">How many years of experience do you have programming?</label>
+        <input type="number" name="yoe" class="form-control" placeholder="0">
+      </div>
+      <div class="form-group">
+        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Tabs or spaces?</label>
+        <select class="custom-select my-1 mr-sm-2" name="tabVSSpace">
+          <option selected>Choose...</option>
+          <option value="tab">Tab</option>
+          <option value="space">Space</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Which editors have you tried?</label>
+        <div class="custom-control custom-checkbox my-1 mr-sm-2">
+          <input type="checkbox" name="editor" value="visual-studio-code">
+          Visual Studio Code
+          <br/>
+          <input type="checkbox" name="editor" value="atom">
+          Atom
+          <br/>
+          <input type="checkbox" name="editor" value="sublime-text">
+          Sublime Text
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput">What companies have you worked for?</label>
+        <input type="text" name="companies" class="form-control" placeholder="Please enter a company" required>
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput">Any comments?</label>
+        <input type="text" name="comments" class="form-control" placeholder="Please enter anything">
+      </div>
+      <button type="submit" class="btn btn-warning" id="bb">Submit</button>
+    </form>
+    <!--
+      <form>
+      <h2> What fruits(s) do you like? </h2>
+      I like:<br>
+      <input type="text" name="fruit" placeholder="fruit name..." required />
+      <br>
+      <br>
+      <h2> What color(s) do you like? </h2>
+      I like:<br>
+      <input type="checkbox" name="color" value="Red"> Red<br>
+      <input type="checkbox" name="color" value="Green"> Green<br>
+      <input type="checkbox" name="color" value="Blue"> Blue<br>
+      <br>
+      <h2>What is your favorite animal?</h2>
+      I like:<br>
+      <select name="animal">
+        <option value="Cat" selected="selected">Cat</option>
+        <option value="Dog">Dog</option>
+        <option value="Turtle">Turtle</option>
+      </select>
+      <br>
+      <br>
+      <button type="submit" class="btn btn-warning" id="bb">Submit</button>
+      <p id="thanks"></p>
+    </form>
+    -->
+  </div>
+  <script src="/assets/action.js"></script>
+</body>
+
+</html>
